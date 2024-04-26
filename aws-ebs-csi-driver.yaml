@@ -1,7 +1,7 @@
 package:
   name: aws-ebs-csi-driver
   version: 1.30.0
-  epoch: 0
+  epoch: 1
   description: CSI driver for Amazon EBS.
   copyright:
     - license: Apache-2.0
@@ -31,6 +31,10 @@ pipeline:
       repository: https://github.com/kubernetes-sigs/aws-ebs-csi-driver
       tag: v${{package.version}}
       expected-commit: bf04ba2e5616a36c98169134fb296029cb66c69d
+
+  - uses: go/bump
+    with:
+      deps: k8s.io/apimachinery@v1.16.13
 
   - runs: |
       # Our global LDFLAGS conflict with a Makefile parameter
