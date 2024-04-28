@@ -32,7 +32,7 @@ jobs:
       group: wolfi-os-builder-${{ matrix.arch }}
 
     container:
-      image: ghcr.io/wolfi-dev/sdk:latest@sha256:4b800b600ceeb169f8c6def665c792cea7430f74e36b591426dfad23f3844dca
+      image: ghcr.io/wolfi-dev/sdk:latest@sha256:94769b4539b2729d6fe1bbc846401b19dc34a5f7f0c86eaf7c9de119dd202e3e
 
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
